@@ -837,6 +837,65 @@ img{
     padding: .25rem .5rem .5rem 0;
 }
 
+.contact__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    pointer-events: none;
+    /* visibility: hidden; */
+    transition: all .3s;
+}
+
+.contacts__modal-content{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.contacts__modal-contacts{
+    row-gap: 1rem;
+}
+
+.contacts__modal-contact{
+    display: flex;
+}
+
+.contacts__modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+}
+
+.contacts__modal-icon{
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
+}
+.contact__form-loader{
+    display: flex;
+    justify-self: center;
+}
+.none{
+    display: none;
+}
+
+
+/* Active Modal */
+.contact__modal#gracias:target{
+    opacity: 1;
+    pointer-events: auto;
+    /* visibility: visible; */
+}
+
 
 /*==================== FOOTER ====================*/
 .footer{

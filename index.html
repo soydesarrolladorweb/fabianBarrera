@@ -600,30 +600,43 @@
                     <form action="" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Nombre</label>
-                                <input type="text" class="contact__input">
+                                <label for="" class="contact__label">Nombre*</label>
+                                <input type="text" name="name" title="Nombre solo acepta letras y espacios en blanco" class="contact__input" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <label for="" class="contact__label">Email*</label>
+                                <input type="email" name="email" title="Campo para colocar un correo verificado" class="contact__input" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
                             </div>
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Proyecto</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" name="project" title="Coloca el nombre del proyecto" class="contact__input">
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Mensaje</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="" class="contact__label">Mensaje*</label>
+                            <textarea name="comments" id="" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
-
+                        <div class="contact__form-loader contacts__modal-icon none">
+                            <img src="assets/img/loader.svg" alt="Enviando...">
+                        </div>
                         <div>
-                            <a href="#" class="button button--flex">
-                                Enviar Mensaje
-                                <i class="uil uil-message button__icon"></i>
-                            </a>
+                            <input type="submit" class="button button--flex" value="Enviar Mensaje">  
                         </div>
                     </form>
+
+                    <div class="contact__modal" id="gracias">
+                        <div class="contacts__modal-content">
+                            <h4 class="contacts__modal-title">!Muchas Gracias¡</h4>
+                            <ul class="contacts__modal-contacts grid">
+                                <li class="contacts__modal-contact">
+                                    <i class="uil uil-smile contacts__modal-icon">
+                                        <p>Se validará la información y en menos de 24 horas me contactare contigo.</p>
+                                    </i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
